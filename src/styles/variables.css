@@ -1,0 +1,47 @@
+:root {
+  /* Brand primaries */
+  --color-peach: #eebfa8;
+  --color-copper: #8f5d46;
+
+  /* Semantic mapping */
+  --color-blush: var(--color-peach);
+  --color-text: var(--color-copper);
+  --color-mocha: var(--color-copper);
+  --color-terracotta: var(--color-copper);
+  --color-cream: #faf5ef;
+  --color-sage: #8fa68e;
+  --color-bg: var(--color-cream);
+  /* Wordmark — copper softened with peach to match nav bar & link color family */
+  --color-wordmark: color-mix(in srgb, var(--color-copper) 68%, var(--color-peach) 32%);
+  /* Dark surfaces (footer, values band) — copper pulled toward ink for contrast */
+  --color-footer-bg: color-mix(in srgb, var(--color-copper) 72%, #1a120e);
+  --color-ink-deep: color-mix(in srgb, var(--color-copper) 45%, #0d0a08);
+
+  /* For rgba() shadows & hairlines */
+  --rgb-copper: 143, 93, 70;
+  --rgb-peach: 238, 191, 168;
+
+  /* Typography */
+  --font-display: "Brittany", "Great Vibes", cursive;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --max-content: 1200px;
+  --nav-height: 4.25rem;
+  --radius-pill: 999px;
+  --radius-card: 20px;
+  --radius-frame: 50%;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 0.2s;
+  --duration-med: 0.45s;
+}
