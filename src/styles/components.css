@@ -50,8 +50,8 @@
 /* ——— Hero ——— */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
+  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100dvh - var(--nav-height));
   display: flex;
   align-items: flex-start;
   padding: var(--space-lg) var(--space-md) var(--space-xl);
@@ -1201,9 +1201,20 @@
   transform: translateX(4px);
 }
 
+/* ——— Mobile-only overrides ——— */
+@media (max-width: 767px) {
+  /* Extra top padding so the Brittany display font's tall ascenders
+     in the "Sister Sister" wordmark don't get clipped by the viewport edge */
+  .site-nav__inner {
+    padding-top: calc(var(--space-sm) + 0.5rem);
+  }
+}
+
 /* ——— Breakpoints ——— */
 @media (min-width: 768px) {
   .hero {
+    min-height: 100vh;
+    min-height: 100dvh;
     align-items: center;
     padding-top: calc(var(--nav-height) + var(--space-lg));
   }
