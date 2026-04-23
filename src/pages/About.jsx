@@ -44,7 +44,7 @@ export default function About() {
         <GrainOverlay />
         <div className="about-hero__inner">
           <ScrollReveal>
-            <h1 className="about-hero__title">We are Sister Sister.</h1>
+            <h1 className="about-hero__title">We are Sister Sister</h1>
           </ScrollReveal>
         </div>
       </section>
@@ -53,11 +53,15 @@ export default function About() {
         <div className="about-story__inner">
           <ScrollReveal className="about-story__copy" delay={0.06}>
             <div className="about-story__media">
-              <div className="about-story__circle">
-                <div className="about-story__circle-media">
-                  <img src={BRAND_PHOTO} alt="Sister Sister — brand illustration" width={640} height={640} />
-                </div>
-              </div>
+              <img
+                className="about-story__banner"
+                src={BRAND_PHOTO}
+                alt="Sister Sister — brand banner"
+                width={1200}
+                height={480}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div className="about-story__text">
               <h2 className="about-story__heading">Our story</h2>
