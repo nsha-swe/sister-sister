@@ -4,6 +4,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
+function isAlreadyVisible(el) {
+  const rect = el.getBoundingClientRect()
+  return rect.top < window.innerHeight && rect.bottom > 0
+}
+
 export default function ScrollReveal({ children, className = "", as = "div", delay = 0, slide }) {
   const ref = useRef(null)
   const Component = as
@@ -11,6 +16,10 @@ export default function ScrollReveal({ children, className = "", as = "div", del
   useLayoutEffect(() => {
     const el = ref.current
     if (!el) return
+
+    // Elements already in the viewport on mount (common on mobile) must not be
+    // hidden — skip the fromTo so they remain at their natural visible state.
+    if (isAlreadyVisible(el)) return
 
     const from =
       slide === "left"

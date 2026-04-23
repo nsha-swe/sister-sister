@@ -10,7 +10,10 @@
   --color-terracotta: var(--color-copper);
   --color-cream: #faf5ef;
   --color-sage: #8fa68e;
-  --color-bg: var(--color-cream);
+  --color-bg: #ffeff1;
+  /* Soft pink for nav + story band text on copper */
+  --color-shell-pink: #ffe3ea;
+  --rgb-shell-pink: 255, 227, 234;
   /* Wordmark — copper softened with peach to match nav bar & link color family */
   --color-wordmark: color-mix(in srgb, var(--color-copper) 68%, var(--color-peach) 32%);
   /* Dark surfaces (footer, values band) — copper pulled toward ink for contrast */

@@ -26,7 +26,7 @@ export default function Footer() {
               <Link to="/order">Order</Link>
             </li>
             <li>
-              <Link to="/inquire">General Inquiry</Link>
+              <Link to="/inquire">General Inquiries</Link>
             </li>
           </ul>
         </div>
