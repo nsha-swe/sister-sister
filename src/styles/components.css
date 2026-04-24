@@ -1035,6 +1035,7 @@
 .about-story__media {
   width: 100%;
   margin: 0 auto var(--space-lg);
+  overflow: hidden;
 }
 
 .about-story__text {
@@ -1048,6 +1049,14 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform var(--duration-med) var(--ease-out);
+}
+
+.about-story__media:hover .about-story__banner,
+.about-story__media:focus-within .about-story__banner {
+  transform: scale(1.045);
 }
 
 .about-story__heading {
@@ -1309,6 +1318,11 @@
 
   .hero__figure:hover {
     transform: none;
+  }
+
+  .about-story__media:hover .about-story__banner,
+  .about-story__media:focus-within .about-story__banner {
+    transform: scale(1);
   }
 
   .about-hero__video {
